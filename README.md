@@ -1,30 +1,19 @@
-## Website Performance Optimization portfolio project
+# Website Performance Optimization
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+The home portfolio page is now optimized to reach **99/100** speed on PageSpeed Insights.
 
-To get started, check out the repository, inspect the code,
+## Installation
 
-### Getting started
+1. Clone repository with `git clone https://github.com/ahusseinali/udportfolio.git`
+2. Host the _dist_ directory on a local webserver.
+3. _web.config_ is made for IIS web server, thus IIS is recommended for maximum PageSpeed score.
+4. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
-Some useful tips to help you get started:
-
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+## Running the hosted page:
+1. Open a browser and visit http://localhost:80/<Application Name>/
+6. Go to **ngrok** download directory and run `ngrok http 80`.
+7. The _Forwarding_ section contains the mapping between localhost and the public url.
+8. Copy the public URL ngrok gives you and try running it through PageSpeed Insights.
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
