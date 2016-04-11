@@ -5,7 +5,7 @@ The home portfolio page is now optimized to reach a score over **94/100** on Pag
 ## Installation
 
 1. Clone repository with `git clone https://github.com/ahusseinali/udportfolio.git`
-2. Host the _dist_ directory on a local webserver.
+2. Host the _/dist_ directory on a local webserver.
 3. _web.config_ is made for IIS web server, thus IIS is recommended for maximum PageSpeed score.
 4. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
