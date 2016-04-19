@@ -1,1 +1,112 @@
-<!DOCTYPE html><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><meta content="My Portfolio"name=description><meta content="Ahmed Ali"name=author><title>Ahmed Ali: Portfolio</title><style>body{background:#fff;color:#333;margin:0;font:400 14px/1.61 'Open Sans',sans-serif}a:focus{outline:dotted thin}a:active,a:hover{color:#c00;outline:0}ul{margin:1em 0;padding:0 0 0 20px}.container,footer,header{max-width:45em;margin:0 auto}header{padding:0 .5em;color:#c90b0b}header img{border-radius:40px;float:left}header p{font-size:1.5em;padding-left:4em}header span{font-size:.8em}.hero{padding:2em;background-color:#f8f8f8;font-size:1.2em;border-width:1px 0;border-style:solid;border-color:#ccc}.content{padding:1em}li{list-style-type:none;font-size:1.1em}li img{float:left;padding-right:1em}li p{font-size:.9em;font-style:italic}footer{padding:0 .5em;border-top:1px solid #ccc}</style><link href=css/portrait.min.css media="max-width: 480px"rel=stylesheet><link href=css/print.css media=print rel=stylesheet><script async>!function(e,n){e.GoogleAnalyticsObject=n,e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},e[n].l=1*new Date}(window,"ga"),ga("create","UA-XXXX-Y"),ga("send","pageview")</script><script async src=http://www.google-analytics.com/analytics.js></script><script async src=js/perfmatters.min.js></script><header><a href=/ ><img src=img/profilepic.jpg></a><p><strong>Ahmed Ali</strong><br><span>Software Engineer</span></header><div class=container><div class=hero><strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken.<br>Contact me: me@email.com</div><div class=content><ul><li><img src=img/intro_html.jpg> <a href=https://www.udacity.com/course/viewer#!/c-ud304-nd>Intro to HTML and CSS!</a><p>This course helped me learn about basics of HTML and CSS<li><img src=img/resp_web.jpg> <a href=https://www.udacity.com/course/viewer#!/c-ud893-nd>Responsive Web Design Fundamentals</a><p>I learned how to think responsively and design for different screen sizes!<li><img src=img/perf_opt.jpg> <a href=https://www.udacity.com/course/viewer#!/c-ud884>Website Performance Optimization</a><p>I learned how to optimize and speed up the rendering of my web pages!<li><img src=img/ood_js.jpg> <a href=https://www.udacity.com/course/viewer#!/c-ud015-nd>Object-Oriented JavaScript</a><p>I learned how to switch from functional programming to object-oriented programming in JavaScript!<li><img src=img/canvas.jpg> <a href=https://www.udacity.com/course/viewer#!/c-ud292-nd>HTML5 Canvas</a><p>I learned how to render shapes, colors, text in HTML5 Canvas. This is the corner stone in developing HTML5 games!</ul></div><footer><p>© Web Performance 2016 <em id=crp-stats style=float:right></em></footer>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My Portfolio">
+    <meta name="author" content="Ahmed Ali">
+    <title>Ahmed Ali: Portfolio</title>
+
+    <style>
+      body { background: #fff; color: #333; margin: 0; font: 400 14px/1.61 'Open Sans', sans-serif;}
+
+      a:focus { outline:dotted thin }
+      a:active, a:hover { color:#c00; outline:0 }
+
+      ul { margin: 1em 0; padding: 0 0 0 20px; }
+
+      header, footer, .container { max-width: 45em; margin: 0 auto; }
+
+      header { padding: 0 0.5em; color: #c90b0b; }
+      header img { border-radius: 40px; float: left; }
+      header p { font-size:1.5em; padding-left: 4em;}
+      header span { font-size: 0.8em;}
+
+      .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #ccc;
+      }
+
+      .content { padding: 1em; }
+      li { list-style-type: none; font-size: 1.1em;}
+      li img { float:left; padding-right: 1em; }
+      li p { font-size: 0.9em; font-style: italic; }
+
+      footer {
+        padding: 0 0.5em;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+    <link href="css/portrait.min.css" rel="stylesheet" media="max-width: 480px">
+
+    <link href="css/print.min.css" rel="stylesheet" media="print">
+
+
+    <script async>
+      (function(w,g){w['GoogleAnalyticsObject']=g;
+      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+      ga('create', 'UA-XXXX-Y');
+      ga('send', 'pageview');
+    </script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <script async src="js/perfmatters.min.js"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <a href="/"><img src="img/profilepic.jpg"></a>
+      <p><strong>Ahmed Ali</strong><br><span>Software Engineer</span></p>
+    </header>
+
+    <div class="container">
+      <div class="hero">
+        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken.<br> Contact me: me@email.com
+      </div>
+
+      <div class="content">
+        <ul>
+          <li>
+            <img src="img/intro_html.jpg">
+            <a href="https://www.udacity.com/course/viewer#!/c-ud304-nd">Intro to HTML and CSS!</a>
+            <p>This course helped me learn about basics of HTML and CSS</p>
+          </li>
+
+          <li>
+            <img src="img/resp_web.jpg">
+            <a href="https://www.udacity.com/course/viewer#!/c-ud893-nd">Responsive Web Design Fundamentals</a>
+            <p>I learned how to think responsively and design for different screen sizes!</p>
+          </li>
+
+          <li>
+            <img src="img/perf_opt.jpg">
+            <a href="https://www.udacity.com/course/viewer#!/c-ud884">Website Performance Optimization</a>
+            <p>I learned how to optimize and speed up the rendering of my web pages!</p>
+          </li>
+
+          <li>
+            <img src="img/ood_js.jpg">
+            <a href="https://www.udacity.com/course/viewer#!/c-ud015-nd">Object-Oriented JavaScript</a>
+            <p>I learned how to switch from functional programming to object-oriented programming in JavaScript!</p>
+          </li>
+
+          <li>
+            <img src="img/canvas.jpg">
+            <a href="https://www.udacity.com/course/viewer#!/c-ud292-nd">HTML5 Canvas</a>
+            <p>I learned how to render shapes, colors, text in HTML5 Canvas. This is the corner stone in developing HTML5 games!</p>
+          </li>
+
+          <li>
+            <img src="views/images/pizzeria.jpg">
+            <a href="views/pizza.html">Cam's Pizzeria</a>
+            <p>Who wants a performant pizza?</p>
+          </li>
+        </ul>
+    </div>
+
+    <footer>
+      <p>&copy; Web Performance 2016 <em id="crp-stats" style="float: right;"></em></p>
+    </footer>
+  </body>
+</html>

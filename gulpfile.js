@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    htmlreplace = require('gulp-html-replace');
     uglify = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename');
@@ -24,5 +25,27 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('html', function() {
+    gulp.src('./src/**/*.html')
+    .pipe(htmlreplace({
+        portrait: {
+            src: 'css',
+            tpl: '<link href="%s/portrait.min.css" rel="stylesheet" media="max-width: 480px">'
+        },
+        print: {
+            src: 'css',
+            tpl: '<link href="%s/print.min.css" rel="stylesheet" media="print">'
+        },
+        perf: {
+            src: 'js',
+            tpl: '<script async src="%s/perfmatters.min.js"></script>'
+        },
+        style: 'css/style.min.css',
+        bootstrap: 'css/bootstrap-grid.min.css',
+        mainjs: 'js/main.min.js'
+    }))
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('default', ['scripts', 'styles', 'html']);
 

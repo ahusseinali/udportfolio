@@ -38,8 +38,12 @@
         border-top: 1px solid #ccc;
       }
     </style>
-    <link href="css/portrait.min.css" rel="stylesheet" media="max-width: 480px">
+    <!-- build:portrait -->
+    <link href="css/portrait.css" rel="stylesheet" media="max-width: 480px">
+    <!-- endbuild -->
+    <!-- build:print -->
     <link href="css/print.css" rel="stylesheet" media="print">
+    <!-- endbuild -->
 
     <script async>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -48,7 +52,9 @@
       ga('send', 'pageview');
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <!-- build:perf -->
     <script async src="js/perfmatters.js"></script>
+    <!-- endbuild -->
   </head>
 
   <body>
