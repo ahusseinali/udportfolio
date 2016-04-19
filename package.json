@@ -1,0 +1,30 @@
+{
+  "name": "udportfolio",
+  "version": "1.0.0",
+  "description": "Web Optimization Project",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahusseinali/udportfolio.git"
+  },
+  "keywords": [
+    "web",
+    "optimization"
+  ],
+  "author": "Ahmed Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahusseinali/udportfolio/issues"
+  },
+  "homepage": "https://github.com/ahusseinali/udportfolio#readme"
+}
