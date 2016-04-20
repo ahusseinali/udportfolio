@@ -60,7 +60,12 @@ gulp.task('largeImg', function() {
     gulp.src('./src/**/pizzeria.jpg')
     .pipe(jpegopt({progressive: true, size: '15%'})())
     .pipe(gulp.dest('./dist'));
-})
+});
 
-gulp.task('default', ['scripts', 'styles', 'html', 'images', 'largeImg']);
+gulp.task('config', function() {
+    gulp.src('./src/web.config')
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('default', ['scripts', 'styles', 'html', 'images', 'largeImg', 'config']);
 
