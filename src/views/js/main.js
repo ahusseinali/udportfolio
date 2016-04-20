@@ -460,20 +460,24 @@ for (var i = 2; i < 100; i++) {
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
-  var items = document.querySelectorAll('.mover');
-  var basePhase = (document.body.scrollTop / 1250);
-  var phases = [];
-  for(var j=0; j < 5; j++) {
-    phases.push(Math.sin(basePhase + j));
-  }
-  for (var i = 0; i < items.length; i++) {
-    items[i].style.left = items[i].basicLeft + 100 * phases[i % 5] + 'px';
-  }
+  var basePhase = document.body.scrollTop / 1250;
+  requestAnimationFrame(function() {var phases = [];
+    for(var j=0; j < 5; j++) {
+      phases.push(Math.sin(basePhase + j));
+    }
+    var index = 0;
+    movingPizzas.forEach(function(pizza) {
+      pizza.style.left = pizza.basicLeft + 100 * phases[index%5] + 'px';
+      index++;
+    });
+  });
 }
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
 
+// Maintains the list of moving pizzas for faster access.
+var movingPizzas = [];
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
@@ -488,5 +492,6 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingParent.appendChild(elem);
+    movingPizzas.push(elem);
   }
 });
