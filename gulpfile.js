@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 // Minify all JS files
 gulp.task('scripts', function() {
     gulp.src('./src/**/*.js')
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(rename(function(path) {
         path.basename += '.min';
         return path;
@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
 // Minify all CSS files
 gulp.task('styles', function() {
     gulp.src('./src/**/*.css')
-    //.pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(rename(function(path) {
         path.basename += '.min';
         return path;
@@ -44,6 +44,7 @@ gulp.task('html', function() {
             tpl: '<script async src="%s/perfmatters.min.js"></script>'
         },
         bootstrap: 'css/bootstrap-grid.min.css',
+        style: 'css/style.css',
         mainjs: 'js/main.min.js'
     }))
     .pipe(gulp.dest('./dist'));
