@@ -2,9 +2,10 @@ var gulp = require('gulp'),
     htmlreplace = require('gulp-html-replace');
     uglify = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
+    jpegopt = require('imagemin-jpegoptim'),
     rename = require('gulp-rename');
 
-// Minify All JS files
+// Minify all JS files
 gulp.task('scripts', function() {
     gulp.src('./src/**/*.js')
     .pipe(uglify())
@@ -15,6 +16,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+// Minify all CSS files
 gulp.task('styles', function() {
     gulp.src('./src/**/*.css')
     .pipe(minifyCSS())
@@ -25,6 +27,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+// Minify all HTML files and change links to CSS and JS to use the minified versions
 gulp.task('html', function() {
     gulp.src('./src/**/*.html')
     .pipe(htmlreplace({
@@ -47,5 +50,17 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['scripts', 'styles', 'html']);
+// Compress images
+gulp.task('images', function() {
+    gulp.src(['./src/**/*.+(jpg|png)', '!./src/views/images/pizzeria.jpg'])
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('largeImg', function() {
+    gulp.src('./src/**/pizzeria.jpg')
+    .pipe(jpegopt({progressive: true, size: '15%'})())
+    .pipe(gulp.dest('./dist'));
+})
+
+gulp.task('default', ['scripts', 'styles', 'html', 'images', 'largeImg']);
 
