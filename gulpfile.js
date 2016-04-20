@@ -43,9 +43,11 @@ gulp.task('html', function() {
             src: 'js',
             tpl: '<script async src="%s/perfmatters.min.js"></script>'
         },
-        style: 'css/style.min.css',
         bootstrap: 'css/bootstrap-grid.min.css',
-        mainjs: 'js/main.min.js'
+        mainjs: {
+            src: 'js'
+            tpl: '<script async src="%s/main.min.js"></script>'
+        }
     }))
     .pipe(gulp.dest('./dist'));
 });
