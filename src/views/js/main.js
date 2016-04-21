@@ -423,20 +423,20 @@ var resizePizzas = function() {
       var newSize;
       switch(size) {
         case "1":
-          newSize = 187;  // About 0.25 of width
+          newSize = 25;  // About 0.25 of width
           break;
         case "2":
-          newSize = 250;  // About 0.3333 of width
+          newSize = 33.33;  // About 0.3333 of width
           break;
         case "3":
-          newSize = 375;  // About 0.5 of width
+          newSize = 50;  // About 0.5 of width
           break;
         default:
           console.log("bug in sizeSwitcher");
       }
       var pizzas = [].slice.call(document.querySelectorAll(".randomPizzaContainer"));
       pizzas.forEach(function(pizza) {
-        pizza.style.width = newSize + 'px';
+        pizza.style.width = newSize + '%';
       });
   }
 
