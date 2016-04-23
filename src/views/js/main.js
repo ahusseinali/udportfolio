@@ -539,4 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
     movingParent.appendChild(elem);
     movingPizzas.push(elem);
   }
+
+  // Correctly set the initial position of the pizzas.
+  updatePositions();
 });
