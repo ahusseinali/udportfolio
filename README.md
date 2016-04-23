@@ -8,7 +8,8 @@ Cam's Pizza page scrolling now takes about **0.05 ms** to generate 10 scrolling 
 
 1. Clone repository with `git clone https://github.com/ahusseinali/udportfolio.git`
 2. Host the _/dist_ directory on a local webserver.
-3. _web.config_ is made for IIS web server, thus IIS is recommended for maximum PageSpeed score.
+3. _web.config_ is configured for IIS web server to enable browser caching, thus IIS is recommended for maximum PageSpeed score.
+4. _.htaccess_ is also added to support browser caching for apache servers, but it's not tested.
 4. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
 ## Rebuild Instructions
