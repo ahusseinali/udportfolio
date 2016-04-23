@@ -16,6 +16,8 @@ Cameron Pittman, Udacity Course Developer
 cameron *at* udacity *dot* com
 */
 
+'use strict';
+
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
 var pizzaIngredients = {};
@@ -407,13 +409,13 @@ var resizePizzas = function() {
   function changeSliderLabel() {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        document.getElementById('pizzaSize').innerHTML = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        document.getElementById('pizzaSize').innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        document.getElementById('pizzaSize').innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -436,7 +438,7 @@ var resizePizzas = function() {
         default:
           console.log("bug in sizeSwitcher");
       }
-      var pizzas = [].slice.call(document.querySelectorAll(".randomPizzaContainer"));
+      var pizzas = [].slice.call(document.getElementsByClassName('randomPizzaContainer'));
       pizzas.forEach(function(pizza) {
         pizza.style.width = newSize + '%';
       });
@@ -513,7 +515,7 @@ function updatePositions() {
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
 
-var sizeSelector = document.querySelector('#sizeSlider');
+var sizeSelector = document.getElementById('sizeSlider');
 sizeSelector.addEventListener('change', resizePizzas);
 
 // Maintains the list of moving pizzas for faster access.
@@ -522,7 +524,7 @@ var movingPizzas = [];
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var movingParent = document.querySelector("#movingPizzas1");
+  var movingParent = document.getElementById('movingPizzas1');
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
