@@ -34,6 +34,8 @@
       width: 256px;
       z-index: -1;
       will-change: transform;
+      transform: translateZ(0); /* Trigger GPU acceleration for faster rendering */
+      backface-visibility:hidden; /* Speed up for no powerful GPU */
     }
 
     .randomPizzaContainer {
