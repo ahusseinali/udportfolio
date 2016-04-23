@@ -409,6 +409,7 @@ var resizePizzas = function() {
   function changeSliderLabel() {
     switch(size) {
       case "1":
+        // Using getElementById is faster than querySelector
         document.getElementById('pizzaSize').innerHTML = "Small";
         return;
       case "2":
@@ -438,6 +439,7 @@ var resizePizzas = function() {
         default:
           console.log("bug in sizeSwitcher");
       }
+      // Using getElementByClassName is faster than querySelectors
       var pizzas = [].slice.call(document.getElementsByClassName('randomPizzaContainer'));
       pizzas.forEach(function(pizza) {
         pizza.style.width = newSize + '%';
@@ -528,8 +530,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var pizzaCount = rows * cols;
   var s = 256;
   var movingParent = document.getElementById('movingPizzas1');
+  var elem;
   for (var i = 0; i < pizzaCount; i++) {
-    var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
