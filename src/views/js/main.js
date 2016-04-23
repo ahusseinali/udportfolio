@@ -523,9 +523,12 @@ var movingPizzas = [];
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
+  // Calculate the number of rows. Divide screen height by pizza image height.
+  var rows = window.screen.height / 300;
+  var pizzaCount = rows * cols;
   var s = 256;
   var movingParent = document.getElementById('movingPizzas1');
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < pizzaCount; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
