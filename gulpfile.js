@@ -63,7 +63,7 @@ gulp.task('largeImg', function() {
 });
 
 gulp.task('config', function() {
-    gulp.src('./src/web.config')
+    gulp.src('./src/+(web.config|.htaccess)')
     .pipe(gulp.dest('./dist'));
 });
 
